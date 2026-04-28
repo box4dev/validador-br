@@ -12,7 +12,7 @@ Se você encontrou um bug ou algo não está funcionando como deveria, por favor
 Para novas ideias ou discussões gerais, use as [GitHub Discussions](https://github.com/box4dev/validador-br/discussions) (se habilitadas) ou abra uma [Issue de Feature](https://github.com/box4dev/validador-br/issues/new?template=feature_request.yml).
 
 ## ✉️ Contato Comercial
-Para assuntos relacionados à marca `box4.dev` ou parcerias, entre em contato via [contato@box4.dev].
+Para assuntos relacionados à marca `box4.dev` ou parcerias, entre em contato via [contact@box4.dev].
 
 ---
 

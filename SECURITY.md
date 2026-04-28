@@ -10,7 +10,7 @@ Atualmente, fornecemos atualizações de segurança para as seguintes versões:
 
 ## Reportando uma Vulnerabilidade
 
-Levamos a segurança deste projeto a sério. Se você encontrar uma vulnerabilidade de segurança, por favor não abra uma Issue pública. Em vez disso, envie um e-mail para [contato@box4.dev].
+Levamos a segurança deste projeto a sério. Se você encontrar uma vulnerabilidade de segurança, por favor não abra uma Issue pública. Em vez disso, envie um e-mail para [contact@box4.dev].
 
 Nossa equipe revisará o relato e responderá o mais rápido possível (geralmente em até 48 horas) com os próximos passos.
 

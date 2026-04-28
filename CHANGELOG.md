@@ -9,7 +9,7 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/spec/v2.0.
 
 ### Adicionado
 - Versão inicial do pacote `@box4dev/validador-br`.
-- Validadores para: CPF, CNPJ (incluindo novo formato alfanumérico), CNH, CNS, Cartão de Crédito, PIS, Certidão, Título de Eleitor e Inscrição Estadual.
+- Validadores para: CPF, CNPJ, CNPJ Alfanumérico, CNH, CNS, Cartão de Crédito, PIS, Certidão, Título de Eleitor e Inscrição Estadual.
 - Suporte completo a TypeScript com geração automática de tipos.
 - Builds em formatos ESM, CJS e UMD.
 - Pipeline de CI com GitHub Actions.

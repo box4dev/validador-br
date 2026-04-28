@@ -66,17 +66,17 @@ console.log(validar.cpf('12345678909'));
 
 ## ✅ Validadores Disponíveis
 
-| Validador | Função | Descrição |
-| :--- | :--- | :--- |
-| **CPF** | `cpf(value)` | Valida Cadastro de Pessoas Físicas. |
-| **CNPJ** | `cnpj(value)` | Valida Cadastro Nacional da Pessoa Jurídica (Suporta novo formato alfanumérico). |
-| **CNH** | `cnh(value)` | Valida Carteira Nacional de Habilitação. |
-| **CNS** | `cns(value)` | Valida Cartão Nacional de Saúde. |
-| **PIS** | `pis(value)` | Valida Programa de Integração Social. |
-| **Título de Eleitor** | `tituloEleitor(value)` | Valida o Título Eleitoral brasileiro. |
-| **Certidão** | `certidao(value)` | Valida Certidões (Nascimento, Casamento, Óbito). |
-| **Inscrição Estadual**| `inscricaoEstadual(value)` | Valida IE para todos os estados brasileiros. |
-| **Cartão de Crédito** | `cartaoCredito(value)`| Valida números de cartão via Algoritmo de Luhn. |
+| Validador              | Função                     | Descrição                                                                        |
+| :--------------------- | :------------------------- | :------------------------------------------------------------------------------- |
+| **CPF**                | `cpf(value)`               | Valida Cadastro de Pessoas Físicas.                                              |
+| **CNPJ**               | `cnpj(value)`              | Valida Cadastro Nacional da Pessoa Jurídica (Suporta novo formato alfanumérico). |
+| **CNH**                | `cnh(value)`               | Valida Carteira Nacional de Habilitação.                                         |
+| **CNS**                | `cns(value)`               | Valida Cartão Nacional de Saúde.                                                 |
+| **PIS**                | `pis(value)`               | Valida Programa de Integração Social.                                            |
+| **Título de Eleitor**  | `tituloEleitor(value)`     | Valida o Título Eleitoral brasileiro.                                            |
+| **Certidão**           | `certidao(value)`          | Valida Certidões (Nascimento, Casamento, Óbito).                                 |
+| **Inscrição Estadual** | `inscricaoEstadual(value)` | Valida IE para todos os estados brasileiros.                                     |
+| **Cartão de Crédito**  | `cartaoCredito(value)`     | Valida números de cartão via Algoritmo de Luhn.                                  |
 
 ---
 
@@ -95,19 +95,19 @@ const isValid: boolean = cpf(meuCpf);
 
 ## 🤝 Contribuição
 
-Contribuições são muito bem-vindas! Sinta-se à vontade para abrir Issues para reportar bugs ou sugerir novas funcionalidades. Para mais detalhes, veja nosso [GUIA DE CONTRIBUIÇÃO](./CONTRIBUTING.md).
+Contribuições são muito bem-vindas! Sinta-se à vontade para abrir Issues para reportar bugs ou sugerir novas funcionalidades. Para mais detalhes, veja nosso [Guia de Contribuição](https://github.com/box4dev/validador-br?tab=contributing-ov-file#readme).
 
 ---
 
 ## ⚖️ Licença
 
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+Distribuído sob a licença MIT. Veja [Licença](https://github.com/box4dev/validador-br?tab=MIT-1-ov-file#readme) para mais informações.
 
 ---
 
 ## 🛡️ Segurança
 
-Para reportar vulnerabilidades de segurança, consulte nossa [POLÍTICA DE SEGURANÇA](./SECURITY.md).
+Para reportar vulnerabilidades de segurança, consulte nossa [Política de Segurança](https://github.com/box4dev/validador-br?tab=security-ov-file#readme).
 
 ---
 

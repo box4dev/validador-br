@@ -36,7 +36,7 @@ Concordamos em restringir os seguintes comportamentos em nossa comunidade. Inst�
 ## Relatando um Problema
 Tensões podem ocorrer entre membros da comunidade mesmo quando estão tentando dar o seu melhor para colaborar. Nem todo conflito representa uma violação do código de conduta, e este Código de Conduta reforça comportamentos e normas incentivados que podem ajudar a evitar conflitos e minimizar danos.
 
-Quando um incidente ocorre, é importante relatá-lo prontamente. Para relatar uma possível violação, entre em contato com a equipe do projeto em **[contato@box4.dev]**.
+Quando um incidente ocorre, é importante relatá-lo prontamente. Para relatar uma possível violação, entre em contato com a equipe do projeto em **[contact@box4.dev]**.
 
 Os Moderadores da Comunidade levam os relatos de violações a sério e farão todos os esforços para responder em tempo hábil. Eles investigarão todos os relatos de violações do código de conduta, revisando mensagens, logs e gravações, ou entrevistando testemunhas e outros participantes. Os Moderadores da Comunidade manterão as ações de investigação e fiscalização o mais transparentes possível, priorizando a segurança e a confidencialidade. Para honrar esses valores, as ações de fiscalização são realizadas em privado com as partes envolvidas, mas a comunicação com toda a comunidade pode fazer parte de uma resolução mutuamente acordada.
 
