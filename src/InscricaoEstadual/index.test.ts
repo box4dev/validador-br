@@ -4,11 +4,13 @@ import { inscricaoEstadual } from './index.js';
 describe('Validador de Inscrição Estadual', () => {
   it('deve retornar false para UF inválida', () => {
     expect(inscricaoEstadual('123456789', 'XX')).toBe(false);
+    expect(inscricaoEstadual('abc', 'SP')).toBe(false); // Caso não numérico
   });
 
   describe('por estado', () => {
     it('AC', () => {
       expect(inscricaoEstadual('01.004.823/001-12', 'AC')).toBe(true);
+      expect(inscricaoEstadual('01.000.000.004-06', 'AC')).toBe(true); // dv >= 10
       expect(inscricaoEstadual('0100482300113', 'AC')).toBe(false);
     });
 
@@ -18,7 +20,8 @@ describe('Validador de Inscrição Estadual', () => {
     });
 
     it('AP', () => {
-      expect(inscricaoEstadual('030123459', 'AP')).toBe(true);
+      expect(inscricaoEstadual('03.012.345-9', 'AP')).toBe(true); // Range 1 (p=5, d=0)
+      expect(inscricaoEstadual('03018001-7', 'AP')).toBe(true); // Range 2 (p=9, d=1)
       expect(inscricaoEstadual('030123458', 'AP')).toBe(false);
     });
 
@@ -28,9 +31,11 @@ describe('Validador de Inscrição Estadual', () => {
     });
 
     it('BA', () => {
-      expect(inscricaoEstadual('123456-36', 'BA')).toBe(true); // 8 digits valid
-      expect(inscricaoEstadual('1234567-84', 'BA')).toBe(true); // 9 digits valid
-      expect(inscricaoEstadual('1000003-06', 'BA')).toBe(false); // 9 digits invalid
+      expect(inscricaoEstadual('123456-36', 'BA')).toBe(true); // 8 digits, Module 10
+      expect(inscricaoEstadual('612345-75', 'BA')).toBe(true); // 8 digits, Module 11
+      expect(inscricaoEstadual('1234567-84', 'BA')).toBe(true); // 9 digits, Module 10
+      expect(inscricaoEstadual('160000130', 'BA')).toBe(true); // 9 digits, Module 11
+      expect(inscricaoEstadual('1000003-06', 'BA')).toBe(false);
     });
 
     it('CE', () => {
@@ -50,6 +55,9 @@ describe('Validador de Inscrição Estadual', () => {
 
     it('GO', () => {
       expect(inscricaoEstadual('10.987.654-7', 'GO')).toBe(true);
+      expect(inscricaoEstadual('10.103.105-1', 'GO')).toBe(true); // Special case remainder 1
+      expect(inscricaoEstadual('11.094.402-1', 'GO')).toBe(true); // Hardcoded case
+      expect(inscricaoEstadual('11.094.402-0', 'GO')).toBe(true); // Hardcoded case
       expect(inscricaoEstadual('109876546', 'GO')).toBe(false);
     });
 
@@ -70,6 +78,7 @@ describe('Validador de Inscrição Estadual', () => {
 
     it('MG', () => {
       expect(inscricaoEstadual('062.307.904/0081', 'MG')).toBe(true);
+      expect(inscricaoEstadual('000.000.000.000.0', 'MG')).toBe(true); // Remainder < 2
       expect(inscricaoEstadual('0623079040082', 'MG')).toBe(false);
     });
 
@@ -144,6 +153,21 @@ describe('Validador de Inscrição Estadual', () => {
     it('TO', () => {
       expect(inscricaoEstadual('29010227836', 'TO')).toBe(true);
       expect(inscricaoEstadual('29010227837', 'TO')).toBe(false);
+    });
+
+    it('deve cobrir caminhos de erro para todas as UFs', () => {
+      const ufs = [
+        'AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 
+        'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 
+        'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'
+      ];
+      
+      ufs.forEach(uf => {
+        // Testa comprimento inválido
+        expect(inscricaoEstadual('1', uf)).toBe(false);
+        // Testa prefixo inválido (onde aplicável)
+        expect(inscricaoEstadual('9999999999999', uf)).toBe(false);
+      });
     });
   });
 });

@@ -4,6 +4,7 @@ import { pis } from './index.js';
 describe('Validador de PIS/PASEP', () => {
   it('deve retornar true para um PIS/PASEP válido sem máscara', () => {
     expect(pis('12038619494')).toBe(true);
+    expect(pis('00000000060')).toBe(true); // Caso resto < 2
   });
 
   it('deve retornar true para um PIS/PASEP válido com máscara', () => {
