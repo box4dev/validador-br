@@ -1,5 +1,5 @@
 {
-  "name": "validador-br",
+  "name": "@box4dev/validador-br",
   "version": "0.0.1",
   "description": "Uma biblioteca completa e moderna para validação de documentos e dados brasileiros.",
   "author": "box4.dev",

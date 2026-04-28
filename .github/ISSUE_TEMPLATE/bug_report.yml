@@ -1,0 +1,61 @@
+name: "Relatar um Bug 🐛"
+description: "Crie um relatório para nos ajudar a melhorar o validador-br"
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por reservar um tempo para relatar um bug! Por favor, preencha as informações abaixo.
+  - type: input
+    id: value_caused_error
+    attributes:
+      label: Valor que causou o erro
+      description: Qual dado você estava tentando validar? (Ex: um CPF específico)
+      placeholder: "Ex: 123.456.789-01"
+    validations:
+      required: true
+  - type: dropdown
+    id: validator_name
+    attributes:
+      label: Qual validador apresentou o problema?
+      options:
+        - CPF
+        - CNPJ
+        - CNH
+        - CNS
+        - PIS
+        - Título de Eleitor
+        - Certidão
+        - Inscrição Estadual
+        - Cartão de Crédito
+        - Outro
+    validations:
+      required: true
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: Comportamento Atual
+      description: O que aconteceu?
+      placeholder: "Ex: O CPF retornou true mas deveria ser false."
+    validations:
+      required: true
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Comportamento Esperado
+      description: O que você esperava que acontecesse?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versão da Biblioteca
+      placeholder: "Ex: 0.0.1"
+    validations:
+      required: false
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Contexto Adicional
+      description: Adicione qualquer outra informação ou capturas de tela aqui.
