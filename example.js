@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+
 
 // Exemplo de uso com ES Modules (import)
 // Para executar: node examples/example.js

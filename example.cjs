@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable no-console */
+
 
 // Exemplo de uso com CommonJS (require)
 // Para executar: node examples/example.cjs
