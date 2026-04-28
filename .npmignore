@@ -1,0 +1,28 @@
+# Source
+src/
+**/index.test.ts
+**/*.test.ts
+
+# Configs
+.github/
+.vscode/
+.eslintrc.json
+.prettierrc
+tsconfig.json
+vite.config.ts
+vitest.config.ts
+
+# Examples
+example.js
+example.cjs
+
+# Tests
+coverage/
+__tests__/
+
+# Local
+node_modules/
+.npmrc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

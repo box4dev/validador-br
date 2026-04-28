@@ -9,14 +9,21 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-
-    /* Type Generation */
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    
+    /* Type Generation (Handled by vite-plugin-dts) */
     "declaration": true,
+    "declarationMap": true,
     "emitDeclarationOnly": true,
     "declarationDir": "dist",
 
     /* Build */
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
