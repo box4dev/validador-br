@@ -148,17 +148,17 @@ console.log(cartaoCredito('4389351453183261')); // true ou false
 
 ## ✅ Validadores Disponíveis
 
-| Validador              | Função                     | Descrição                                                                        |
-| :--------------------- | :------------------------- | :------------------------------------------------------------------------------- |
-| **CPF**                | `cpf(value)`               | Valida Cadastro de Pessoas Físicas.                                              |
-| **CNPJ**               | `cnpj(value)`              | Valida Cadastro Nacional da Pessoa Jurídica (Suporta novo formato alfanumérico). |
-| **CNH**                | `cnh(value)`               | Valida Carteira Nacional de Habilitação.                                         |
-| **CNS**                | `cns(value)`               | Valida Cartão Nacional de Saúde.                                                 |
-| **PIS**                | `pis(value)`               | Valida Programa de Integração Social.                                            |
-| **Título de Eleitor**  | `tituloEleitor(value)`     | Valida o Título Eleitoral brasileiro.                                            |
-| **Certidão**           | `certidao(value)`          | Valida Certidões (Nascimento, Casamento, Óbito).                                 |
-| **Inscrição Estadual** | `inscricaoEstadual(value)` | Valida IE para todos os estados brasileiros.                                     |
-| **Cartão de Crédito**  | `cartaoCredito(value)`     | Valida números de cartão via Algoritmo de Luhn.                                  |
+| Validador              | Função                         | Descrição                                                           |
+| :--------------------- | :----------------------------- | :------------------------------------------------------------------ |
+| **CPF**                | `cpf(value)`                   | Valida Cadastro de Pessoas Físicas.                                 |
+| **CNPJ**               | `cnpj(value)`                  | Valida Cadastro Nacional da Pessoa Jurídica (Suporta alfanumérico). |
+| **CNH**                | `cnh(value)`                   | Valida Carteira Nacional de Habilitação.                            |
+| **CNS**                | `cns(value)`                   | Valida Cartão Nacional de Saúde.                                    |
+| **PIS**                | `pis(value)`                   | Valida Programa de Integração Social.                               |
+| **Título de Eleitor**  | `tituloEleitor(value)`         | Valida o Título Eleitoral brasileiro.                               |
+| **Certidão**           | `certidao(value)`              | Valida Certidões (Nascimento, Casamento, Óbito).                    |
+| **Inscrição Estadual** | `inscricaoEstadual(value, uf)` | Valida IE para todos os estados brasileiros.                        |
+| **Cartão de Crédito**  | `cartaoCredito(value)`         | Valida números de cartão via Algoritmo de Luhn.                     |
 
 ---
 
