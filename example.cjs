@@ -1,30 +1,40 @@
-
-
 // Exemplo de uso com CommonJS (require)
-// Para executar: node examples/example.cjs
+// Para executar: node example.cjs (após build)
 
-const validador = require('./dist/validador-br.cjs');
+const { isValidCpf, isValidCnpj, validate, cpf, cnpj, validar } = require('./dist/validador-br.cjs');
 
-console.log('--- Testando validador-br com CommonJS ---');
+console.log('--- Testando validador-br com CommonJS ---\n');
 
-// --- Exemplos de CPF ---
-console.log('\n--- Validação de CPF ---');
-const cpfValido = '12345678909'; // Use um CPF válido para testes reais
+// --- Nova API Recomendada ---
+console.log('=== NOVA API (Recomendada) ===');
+console.log('\n--- Validação de CPF (isValidCpf) ---');
+const cpfValido = '12345678909';
 const cpfInvalido = '11111111111';
 const cpfFormatado = '123.456.789-09';
 
-console.log(`CPF "${cpfValido}" é válido?`, validador.cpf(cpfValido));
-console.log(`CPF "${cpfInvalido}" é válido?`, validador.cpf(cpfInvalido));
-console.log(`CPF formatado "${cpfFormatado}" é válido?`, validador.cpf(cpfFormatado));
+console.log(`CPF "${cpfValido}" é válido?`, isValidCpf(cpfValido));
+console.log(`CPF "${cpfInvalido}" é válido?`, isValidCpf(cpfInvalido));
+console.log(`CPF formatado "${cpfFormatado}" é válido?`, isValidCpf(cpfFormatado));
 
-// --- Exemplos de CNPJ ---
-console.log('\n--- Validação de CNPJ ---');
-const cnpjValido = '12345678000195'; // Use um CNPJ válido para testes reais
+console.log('\n--- Validação de CNPJ (isValidCnpj) ---');
+const cnpjValido = '12345678000195';
 const cnpjInvalido = '11111111000111';
 const cnpjFormatado = '12.345.678/0001-95';
 
-console.log(`CNPJ "${cnpjValido}" é válido?`, validador.cnpj(cnpjValido));
-console.log(`CNPJ "${cnpjInvalido}" é válido?`, validador.cnpj(cnpjInvalido));
-console.log(`CNPJ formatado "${cnpjFormatado}" é válido?`, validador.cnpj(cnpjFormatado));
+console.log(`CNPJ "${cnpjValido}" é válido?`, isValidCnpj(cnpjValido));
+console.log(`CNPJ "${cnpjInvalido}" é válido?`, isValidCnpj(cnpjInvalido));
+console.log(`CNPJ formatado "${cnpjFormatado}" é válido?`, isValidCnpj(cnpjFormatado));
+
+// --- Usando o objeto validate ---
+console.log('\n=== OBJETO validate (Estilo Centralizado) ===');
+console.log(`validate.cpf("${cpfValido}"):`, validate.cpf(cpfValido));
+console.log(`validate.cnpj("${cnpjValido}"):`, validate.cnpj(cnpjValido));
+
+// --- APIs de Compatibilidade ---
+console.log('\n=== APIs de Compatibilidade (Legado) ===');
+console.log(`cpf() (alias):`, cpf(cpfValido));
+console.log(`cnpj() (alias):`, cnpj(cnpjValido));
+console.log(`validar.cpf (alias português):`, validar.cpf(cpfValido));
+console.log(`validar.cnpj (alias português):`, validar.cnpj(cnpjValido));
 
 console.log('\n------------------------------------------');

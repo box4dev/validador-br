@@ -9,7 +9,7 @@ import { clean } from '../utils/clean.js';
  * @param value O número do CNS a ser validado, com ou sem máscara.
  * @returns `true` se o CNS for válido, `false` caso contrário.
  */
-export function cns(value: string | number): boolean {
+export function isValidCns(value: string | number): boolean {
   const cleanedValue = clean(value);
 
   if (cleanedValue.length !== 15) {

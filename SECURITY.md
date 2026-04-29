@@ -6,7 +6,7 @@ Atualmente, fornecemos atualizações de segurança para as seguintes versões:
 
 | Versão | Suportada |
 | ------- | --------- |
-| v0.x.x  | ✅ Sim     |
+| v1.x.x  | ✅ Sim     |
 
 ## Reportando uma Vulnerabilidade
 

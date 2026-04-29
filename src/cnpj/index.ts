@@ -4,7 +4,7 @@
  * @param value O número de CNPJ a ser validado, com ou sem máscara.
  * @returns `true` se o CNPJ for válido, `false` caso contrário.
  */
-export function cnpj(value: string | number): boolean {
+export function isValidCnpj(value: string | number): boolean {
   const rawValue = String(value);
 
   // 1. Check for invalid characters. Only A-Z, 0-9, '.', '/', '-' are allowed.

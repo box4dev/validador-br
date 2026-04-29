@@ -6,7 +6,7 @@ import { clean } from '../utils/clean.js';
  * @param value O número do PIS/PASEP a ser validado, com ou sem máscara.
  * @returns `true` se o número for válido, `false` caso contrário.
  */
-export function pis(value: string | number): boolean {
+export function isValidPis(value: string | number): boolean {
   const cleanedValue = clean(value);
 
   if (

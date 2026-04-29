@@ -10,7 +10,7 @@ import { luhn } from '../utils/luhn.js';
  * @param value O número do cartão de crédito a ser validado, com ou sem máscara.
  * @returns `true` se o número do cartão for válido, `false` caso contrário.
  */
-export function cartaoCredito(value: string | number): boolean {
+export function isValidCartaoCredito(value: string | number): boolean {
   const cleanedValue = clean(value);
 
   if (cleanedValue.length < 13 || cleanedValue.length > 19) {

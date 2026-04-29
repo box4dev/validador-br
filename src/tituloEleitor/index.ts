@@ -6,7 +6,7 @@ import { clean } from '../utils/clean.js';
  * @param value O número do Título de Eleitor a ser validado, com ou sem máscara.
  * @returns `true` se o número for válido, `false` caso contrário.
  */
-export function tituloEleitor(value: string | number): boolean {
+export function isValidTituloEleitor(value: string | number): boolean {
   const cleanedValue = clean(value);
 
   if (

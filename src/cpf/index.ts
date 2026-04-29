@@ -6,7 +6,7 @@ import { clean } from '../utils/clean.js';
  * @param value O número de CPF a ser validado, com ou sem máscara.
  * @returns `true` se o CPF for válido, `false` caso contrário.
  */
-export function cpf(value: string | number): boolean {
+export function isValidCpf(value: string | number): boolean {
   const cleanedValue = clean(value);
 
   if (cleanedValue.length !== 11 || /^(\d)\1{10}$/.test(cleanedValue)) {

@@ -1,49 +1,67 @@
-import { cpf } from './cpf/index.js';
-import { cnpj } from './cnpj/index.js';
-import { cnh } from './cnh/index.js';
-import { cns } from './cns/index.js';
-import { cartaoCredito } from './cartaoCredito/index.js';
-import { pis } from './pis/index.js';
-import { certidao } from './certidao/index.js';
-import { tituloEleitor } from './tituloEleitor/index.js';
-import { inscricaoEstadual } from './inscricaoEstadual/index.js';
+import { isValidCpf } from './cpf/index.js';
+import { isValidCnpj } from './cnpj/index.js';
+import { isValidCnh } from './cnh/index.js';
+import { isValidCns } from './cns/index.js';
+import { isValidCartaoCredito } from './cartaoCredito/index.js';
+import { isValidPis } from './pis/index.js';
+import { isValidCertidao } from './certidao/index.js';
+import { isValidTituloEleitor } from './tituloEleitor/index.js';
+import { isValidInscricaoEstadual } from './inscricaoEstadual/index.js';
 
-/**
- * Coleção completa de validadores para documentos e dados brasileiros.
- * @namespace validar
- */
-const validar = {
-  /** Valida CPF (Cadastro de Pessoas Físicas) */
-  cpf,
-  /** Valida CNPJ (Cadastro Nacional da Pessoa Jurídica) - Suporta novo formato alfanumérico */
-  cnpj,
-  /** Valida CNH (Carteira Nacional de Habilitação) */
-  cnh,
-  /** Valida CNS (Cartão Nacional de Saúde) */
-  cns,
-  /** Valida Cartão de Crédito (Algoritmo de Luhn) */
-  cartaoCredito,
-  /** Valida PIS (Programa de Integração Social) */
-  pis,
-  /** Valida Certidão (Nascimento, Casamento, Óbito) */
-  certidao,
-  /** Valida Título de Eleitor */
-  tituloEleitor,
-  /** Valida Inscrição Estadual (IE) para todos os estados brasileiros */
-  inscricaoEstadual,
-} as const;
-
+// ============================================================================
+// Named exports primários (API recomendada - camelCase com prefixo isValid)
+// ============================================================================
 export {
-  cpf,
-  cnpj,
-  cnh,
-  cns,
-  cartaoCredito,
-  pis,
-  certidao,
-  tituloEleitor,
-  inscricaoEstadual,
-  validar,
+  isValidCpf,
+  isValidCnpj,
+  isValidCnh,
+  isValidCns,
+  isValidCartaoCredito,
+  isValidPis,
+  isValidCertidao,
+  isValidTituloEleitor,
+  isValidInscricaoEstadual,
 };
 
-export default validar;
+// ============================================================================
+// Aliases de compatibilidade (legado - nomes curtos sem prefixo)
+// ============================================================================
+export { isValidCpf as cpf };
+export { isValidCnpj as cnpj };
+export { isValidCnh as cnh };
+export { isValidCns as cns };
+export { isValidCartaoCredito as cartaoCredito };
+export { isValidPis as pis };
+export { isValidCertidao as certidao };
+export { isValidTituloEleitor as tituloEleitor };
+export { isValidInscricaoEstadual as inscricaoEstadual };
+
+// ============================================================================
+// Objeto agrupador moderno (para quem prefere estilo centralizado)
+// ============================================================================
+export const validate = {
+  /** Valida CPF (Cadastro de Pessoas Físicas) */
+  cpf: isValidCpf,
+  /** Valida CNPJ (Cadastro Nacional da Pessoa Jurídica) - Suporta novo formato alfanumérico */
+  cnpj: isValidCnpj,
+  /** Valida CNH (Carteira Nacional de Habilitação) */
+  cnh: isValidCnh,
+  /** Valida CNS (Cartão Nacional de Saúde) */
+  cns: isValidCns,
+  /** Valida Cartão de Crédito (Algoritmo de Luhn) */
+  cartaoCredito: isValidCartaoCredito,
+  /** Valida PIS (Programa de Integração Social) */
+  pis: isValidPis,
+  /** Valida Certidão (Nascimento, Casamento, Óbito) */
+  certidao: isValidCertidao,
+  /** Valida Título de Eleitor */
+  tituloEleitor: isValidTituloEleitor,
+  /** Valida Inscrição Estadual (IE) para todos os estados brasileiros */
+  inscricaoEstadual: isValidInscricaoEstadual,
+} as const;
+
+// ============================================================================
+// Alias de compatibilidade em português (legado)
+// ============================================================================
+/** @deprecated Use `validate` em vez de `validar` */
+export const validar = validate;

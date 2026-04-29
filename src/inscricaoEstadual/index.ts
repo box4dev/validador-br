@@ -331,7 +331,7 @@ const validators: Record<string, Validator> = {
  * @param uf A sigla da UF (ex: 'SP', 'RJ', 'BA').
  * @returns `true` se a Inscrição Estadual for válida para a UF fornecida, `false` caso contrário.
  */
-export function inscricaoEstadual(value: string | number, uf: string): boolean {
+export function isValidInscricaoEstadual(value: string | number, uf: string): boolean {
   const upperUf = uf.toUpperCase();
   const validator = validators[upperUf];
 

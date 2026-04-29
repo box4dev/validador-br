@@ -9,7 +9,7 @@ import { clean } from '../utils/clean.js';
  * @param value A matrícula da certidão a ser validada, com ou sem máscara.
  * @returns `true` se a matrícula for válida, `false` caso contrário.
  */
-export function certidao(value: string | number): boolean {
+export function isValidCertidao(value: string | number): boolean {
   const cleanedValue = clean(value);
 
   if (
