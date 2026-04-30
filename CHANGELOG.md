@@ -20,7 +20,7 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/spec/v2.0.
 - Atualização dos exemplos (`example.js` e `example.cjs`) demonstrando uso ESM e CJS.
 
 ### Deprecated
-- Aliases de compatibilidade `cpf`, `cnpj`, `cnh`, `cns`, `pis`, `certidao`, `tituloEleitor`, `cartaoCredito`, `inscricaoEstadual` - ainda funcionam mas a nova API `isValidXxx` é recomendada.
+- Aliases de compatibilidade `cpf`, `cnpj`, `cnh`, `cns`, `pis`, `certidao`, `tituloEleitor`, `cartaoCredito`, `incricaoEstadual` - ainda funcionam mas a nova API `isValidXxx` é recomendada.
 - Objeto `validar` (alias em português) - use `validate` em vez disso.
 
 ### Removed

@@ -6,7 +6,7 @@ import { isValidCartaoCredito } from './cartaoCredito/index.js';
 import { isValidPis } from './pis/index.js';
 import { isValidCertidao } from './certidao/index.js';
 import { isValidTituloEleitor } from './tituloEleitor/index.js';
-import { isValidInscricaoEstadual } from './inscricaoEstadual/index.js';
+import { isValidIE } from './ie/index.js';
 
 // ============================================================================
 // Named exports primários (API recomendada - camelCase com prefixo isValid)
@@ -20,24 +20,11 @@ export {
   isValidPis,
   isValidCertidao,
   isValidTituloEleitor,
-  isValidInscricaoEstadual,
+  isValidIE,
 };
 
 // ============================================================================
-// Aliases de compatibilidade (legado - nomes curtos sem prefixo)
-// ============================================================================
-export { isValidCpf as cpf };
-export { isValidCnpj as cnpj };
-export { isValidCnh as cnh };
-export { isValidCns as cns };
-export { isValidCartaoCredito as cartaoCredito };
-export { isValidPis as pis };
-export { isValidCertidao as certidao };
-export { isValidTituloEleitor as tituloEleitor };
-export { isValidInscricaoEstadual as inscricaoEstadual };
-
-// ============================================================================
-// Objeto agrupador moderno (para quem prefere estilo centralizado)
+// Objeto agrupador (para quem prefere estilo centralizado)
 // ============================================================================
 export const validate = {
   /** Valida CPF (Cadastro de Pessoas Físicas) */
@@ -57,11 +44,6 @@ export const validate = {
   /** Valida Título de Eleitor */
   tituloEleitor: isValidTituloEleitor,
   /** Valida Inscrição Estadual (IE) para todos os estados brasileiros */
-  inscricaoEstadual: isValidInscricaoEstadual,
+  IE: isValidIE,
 } as const;
 
-// ============================================================================
-// Alias de compatibilidade em português (legado)
-// ============================================================================
-/** @deprecated Use `validate` em vez de `validar` */
-export const validar = validate;

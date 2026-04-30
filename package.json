@@ -1,6 +1,6 @@
 {
   "name": "@box4dev/validador-br",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Uma biblioteca completa e moderna para validação de documentos e dados brasileiros.",
   "author": "box4.dev",
   "license": "MIT",
@@ -58,7 +58,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build && tsc -p tsconfig.build.json",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "lint": "eslint .",

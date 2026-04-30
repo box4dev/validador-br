@@ -63,8 +63,6 @@ console.log(isValidCpf('12345678909')); // true ou false
 console.log(validate.cnpj('GYHU8PG2971E10')); // true ou false
 ```
 
-> **Nota:** Os aliases `cpf`, `cnpj`, `validar`, etc. ainda funcionam para compatibilidade com versões anteriores, mas a nova API com prefixo `isValid` é recomendada.
-
 ## 📚 Exemplos de Uso
 
 ### CPF
@@ -122,10 +120,10 @@ console.log(isValidCertidao('81007223197120011105781766173474')); // true ou fal
 
 ### Inscrição Estadual
 ```javascript
-import { isValidInscricaoEstadual } from '@box4dev/validador-br';
+import { isValidIE } from '@box4dev/validador-br';
 // valor da IE e UF
-console.log(isValidInscricaoEstadual('7122026812064', 'SP')); // true ou false
-console.log(isValidInscricaoEstadual('01.004.823/001-12', 'AC')); // true ou false
+console.log(isValidIE('7122026812064', 'SP')); // true ou false
+console.log(isValidIE('01.004.823/001-12', 'AC')); // true ou false
 ```
 
 ### Cartão de Crédito
@@ -137,17 +135,17 @@ console.log(isValidCartaoCredito('4389351453183261')); // true ou false
 
 ## ✅ Validadores Disponíveis
 
-| Validador              | API Recomendada               | Alias (Compatibilidade) | Descrição                                                           |
-| :--------------------- | :---------------------------- | :---------------------- | :------------------------------------------------------------------ |
-| **CPF**                | `isValidCpf(value)`           | `cpf(value)`            | Valida Cadastro de Pessoas Físicas.                                 |
-| **CNPJ**               | `isValidCnpj(value)`          | `cnpj(value)`           | Valida Cadastro Nacional da Pessoa Jurídica (Suporta alfanumérico). |
-| **CNH**                | `isValidCnh(value)`           | `cnh(value)`            | Valida Carteira Nacional de Habilitação.                            |
-| **CNS**                | `isValidCns(value)`           | `cns(value)`            | Valida Cartão Nacional de Saúde.                                    |
-| **PIS**                | `isValidPis(value)`           | `pis(value)`            | Valida Programa de Integração Social.                               |
-| **Título de Eleitor**  | `isValidTituloEleitor(value)` | `tituloEleitor(value)`  | Valida o Título Eleitoral brasileiro.                               |
-| **Certidão**           | `isValidCertidao(value)`      | `certidao(value)`       | Valida Certidões (Nascimento, Casamento, Óbito).                    |
-| **Inscrição Estadual** | `isValidInscricaoEstadual(value, uf)` | `inscricaoEstadual(value, uf)` | Valida IE para todos os estados brasileiros.                |
-| **Cartão de Crédito**  | `isValidCartaoCredito(value)` | `cartaoCredito(value)`  | Valida números de cartão via Algoritmo de Luhn.                     |
+| Validador              | API                            | Descrição                                                           |
+| :--------------------- | :----------------------------- | :------------------------------------------------------------------ |
+| **CPF**                | `isValidCpf(value)`            | Valida Cadastro de Pessoas Físicas.                                 |
+| **CNPJ**               | `isValidCnpj(value)`           | Valida Cadastro Nacional da Pessoa Jurídica (Suporta alfanumérico). |
+| **CNH**                | `isValidCnh(value)`            | Valida Carteira Nacional de Habilitação.                            |
+| **CNS**                | `isValidCns(value)`            | Valida Cartão Nacional de Saúde.                                    |
+| **PIS**                | `isValidPis(value)`            | Valida Programa de Integração Social.                               |
+| **Título de Eleitor**  | `isValidTituloEleitor(value)`  | Valida o Título Eleitoral brasileiro.                               |
+| **Certidão**           | `isValidCertidao(value)`       | Valida Certidões (Nascimento, Casamento, Óbito).                    |
+| **Inscrição Estadual** | `isValidIE(value, uf)`         | Valida Inscrição Estadual para todos os estados brasileiros.        |
+| **Cartão de Crédito**  | `isValidCartaoCredito(value)`  | Valida números de cartão via Algoritmo de Luhn.                     |
 
 ### Objeto `validate` (Estilo Centralizado)
 
