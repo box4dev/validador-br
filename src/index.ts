@@ -44,6 +44,6 @@ export const validate = {
   /** Valida Título de Eleitor */
   tituloEleitor: isValidTituloEleitor,
   /** Valida Inscrição Estadual (IE) para todos os estados brasileiros */
-  IE: isValidIE,
+  ie: isValidIE,
 } as const;
 
