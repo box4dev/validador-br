@@ -1,5 +1,5 @@
-import { describe, it } from 'node:test';
 import assert from 'node:assert';
+import { describe, it } from 'node:test';
 import { isValidCartaoCredito } from './index.js';
 
 describe('Validador de Cartão de Crédito', () => {

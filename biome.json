@@ -17,7 +17,7 @@
   },
   "linter": {
     "enabled": true,
-    "includes": ["**", "!test/**"],
+    "includes": ["**"],
     "rules": {
       "recommended": true,
       "style": {
@@ -38,11 +38,22 @@
       "quoteStyle": "single",
       "trailingCommas": "all",
       "enabled": true
-    }
+    },
+    "globals": []
   },
   "overrides": [
     {
       "includes": ["src/ie/index.ts"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useNamingConvention": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*.test.ts"],
       "linter": {
         "rules": {
           "style": {
