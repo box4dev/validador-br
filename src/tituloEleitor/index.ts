@@ -31,12 +31,14 @@ export function isValidTituloEleitor(value: string | number): boolean {
   const weights1 = [2, 3, 4, 5, 6, 7, 8, 9];
   let sum1 = 0;
   for (let i = 0; i < 8; i++) {
-    sum1 += parseInt(base[i], 10) * weights1[i];
+    const weight = weights1[i] ?? 0;
+    const digit = parseInt(base[i] ?? '0', 10);
+    sum1 += digit * weight;
   }
   const remainder1 = sum1 % 11;
   const calculatedDv1 = remainder1 === 10 ? 0 : remainder1;
 
-  if (calculatedDv1 !== parseInt(dv[0], 10)) {
+  if (calculatedDv1 !== parseInt(dv[0] ?? '0', 10)) {
     return false;
   }
 
@@ -45,11 +47,12 @@ export function isValidTituloEleitor(value: string | number): boolean {
   const sequence2 = uf + calculatedDv1;
   let sum2 = 0;
   for (let i = 0; i < 3; i++) {
-    sum2 += parseInt(sequence2[i], 10) * weights2[i];
+    const weight = weights2[i] ?? 0;
+    const digit = parseInt(sequence2[i] ?? '0', 10);
+    sum2 += digit * weight;
   }
   const remainder2 = sum2 % 11;
   const calculatedDv2 = remainder2 === 10 ? 0 : remainder2;
 
-  return calculatedDv2 === parseInt(dv[1], 10);
+  return calculatedDv2 === parseInt(dv[1] ?? '0', 10);
 }
-

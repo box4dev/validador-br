@@ -1,18 +1,19 @@
-import { describe, it, expect } from 'vitest';
-import { luhn } from './luhn.js';
+import { describe, it } from 'node:test';
+import assert from 'node:assert';
 import { clean } from './clean.js';
+import { luhn } from './luhn.js';
 
 describe('Utilitários', () => {
   describe('luhn', () => {
     it('deve retornar false para strings não numéricas', () => {
-      expect(luhn('abc')).toBe(false);
-      expect(luhn('')).toBe(false);
+      assert.strictEqual(luhn('abc'), false);
+      assert.strictEqual(luhn(''), false);
     });
   });
 
   describe('clean', () => {
     it('deve lidar com números', () => {
-      expect(clean(123456)).toBe('123456');
+      assert.strictEqual(clean(123456), '123456');
     });
   });
 });

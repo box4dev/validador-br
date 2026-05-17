@@ -37,7 +37,8 @@ export function isValidCnpj(value: string | number): boolean {
       // For alphanumeric, the value is derived from its charCode.
       // '0' -> 0, '1' -> 1, ..., 'A' -> 17, 'B' -> 18, ...
       const charValue = char.charCodeAt(0) - valorBase;
-      return acc + charValue * weights[index];
+      const weight = weights[index] ?? 0;
+      return acc + charValue * weight;
     }, 0);
 
     const remainder = sum % 11;

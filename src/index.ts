@@ -1,26 +1,26 @@
-import { isValidCpf } from './cpf/index.js';
-import { isValidCnpj } from './cnpj/index.js';
-import { isValidCnh } from './cnh/index.js';
-import { isValidCns } from './cns/index.js';
 import { isValidCartaoCredito } from './cartaoCredito/index.js';
-import { isValidPis } from './pis/index.js';
 import { isValidCertidao } from './certidao/index.js';
-import { isValidTituloEleitor } from './tituloEleitor/index.js';
+import { isValidCnh } from './cnh/index.js';
+import { isValidCnpj } from './cnpj/index.js';
+import { isValidCns } from './cns/index.js';
+import { isValidCpf } from './cpf/index.js';
 import { isValidIE } from './ie/index.js';
+import { isValidPis } from './pis/index.js';
+import { isValidTituloEleitor } from './tituloEleitor/index.js';
 
 // ============================================================================
 // Named exports primários (API recomendada - camelCase com prefixo isValid)
 // ============================================================================
 export {
-  isValidCpf,
-  isValidCnpj,
-  isValidCnh,
-  isValidCns,
   isValidCartaoCredito,
-  isValidPis,
   isValidCertidao,
-  isValidTituloEleitor,
+  isValidCnh,
+  isValidCnpj,
+  isValidCns,
+  isValidCpf,
   isValidIE,
+  isValidPis,
+  isValidTituloEleitor,
 };
 
 // ============================================================================
@@ -46,4 +46,3 @@ export const validate = {
   /** Valida Inscrição Estadual (IE) para todos os estados brasileiros */
   ie: isValidIE,
 } as const;
-

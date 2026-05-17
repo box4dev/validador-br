@@ -5,6 +5,14 @@ Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado no [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 e este projeto adere ao [Versionamento Semântico](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+- **Build system**: Substituição do Vite pelo tsup para builds mais eficientes e otimizados
+- **Code quality**: Prettier e ESLint substituídos pelo Biome para formatação e linting unificados
+- **Test runner**: Vitest substituído pelo Node.js test runner nativo (testes nativos do Node.js)
+- Todos os arquivos de teste migrados para usar `node:test` e `node:assert` em vez de APIs do Vitest
+
 ## [1.0.1] - 2026-04-29
 
 ### Removed (Breaking Changes)

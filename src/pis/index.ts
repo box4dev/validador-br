@@ -9,10 +9,7 @@ import { clean } from '../utils/clean.js';
 export function isValidPis(value: string | number): boolean {
   const cleanedValue = clean(value);
 
-  if (
-    cleanedValue.length !== 11 ||
-    /^(\d)\1{10}$/.test(cleanedValue)
-  ) {
+  if (cleanedValue.length !== 11 || /^(\d)\1{10}$/.test(cleanedValue)) {
     return false;
   }
 
@@ -21,14 +18,10 @@ export function isValidPis(value: string | number): boolean {
 
   const sum = base
     .split('')
-    .reduce(
-      (acc, digit, index) => acc + parseInt(digit, 10) * weights[index],
-      0,
-    );
+    .reduce((acc, digit, index) => acc + parseInt(digit, 10) * (weights[index] ?? 0), 0);
 
   const remainder = sum % 11;
   const calculatedDigit = remainder < 2 ? 0 : 11 - remainder;
 
   return calculatedDigit === parseInt(cleanedValue.charAt(10), 10);
 }
-

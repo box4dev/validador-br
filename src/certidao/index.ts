@@ -28,8 +28,9 @@ export function isValidCertidao(value: string | number): boolean {
     let sum = 0;
 
     for (let i = 0; i < sequence.length; i++) {
-      const weight = weights[(sequence.length - 1 - i) % weights.length];
-      sum += parseInt(sequence[i], 10) * weight;
+      const weight = weights[(sequence.length - 1 - i) % weights.length] ?? 0;
+      const digit = parseInt(sequence[i] ?? '0', 10);
+      sum += digit * weight;
     }
 
     const remainder = sum % 11;

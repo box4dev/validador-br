@@ -23,10 +23,7 @@ export function isValidCns(value: string | number): boolean {
     const sum = cleanedValue
       .slice(0, 15)
       .split('')
-      .reduce(
-        (acc, digit, index) => acc + parseInt(digit, 10) * (15 - index),
-        0,
-      );
+      .reduce((acc, digit, index) => acc + parseInt(digit, 10) * (15 - index), 0);
     return sum % 11 === 0;
   }
 

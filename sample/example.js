@@ -3,10 +3,7 @@
 // (O package.json na raiz do projeto já tem "type": "module")
 
 // === API RECOMENDADA (named exports com prefixo isValid) ===
-import { isValidCpf, isValidCnpj, validate } from './dist/validador-br.js';
-
-// === API de Compatibilidade (aliases sem prefixo) ===
-import { cpf, cnpj, validar } from './dist/validador-br.js';
+import { isValidCpf, isValidCnpj, validate } from '../dist/index.js';
 
 console.log('--- Testando validador-br com ES Modules ---\n');
 
@@ -34,12 +31,5 @@ console.log(`CNPJ formatado "${cnpjFormatado}" é válido?`, isValidCnpj(cnpjFor
 console.log('\n=== OBJETO validate (Estilo Centralizado) ===');
 console.log(`validate.cpf("${cpfValido}"):`, validate.cpf(cpfValido));
 console.log(`validate.cnpj("${cnpjValido}"):`, validate.cnpj(cnpjValido));
-
-// --- APIs de Compatibilidade ---
-console.log('\n=== APIs de Compatibilidade (Legado) ===');
-console.log(`cpf() (alias):`, cpf(cpfValido));
-console.log(`cnpj() (alias):`, cnpj(cnpjValido));
-console.log(`validar.cpf (alias português):`, validar.cpf(cpfValido));
-console.log(`validar.cnpj (alias português):`, validar.cnpj(cnpjValido));
 
 console.log('\n------------------------------------------');

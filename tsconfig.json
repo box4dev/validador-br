@@ -1,29 +1,28 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2022",
     "module": "ESNext",
-    "lib": ["ESNext", "DOM"],
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
+    "lib": [
+      "ES2022"
+    ],
     "strict": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowJs": true,
-    
-    /* Type Generation (Handled by vite-plugin-dts) */
-    "declaration": true,
-    "declarationMap": true,
-    "emitDeclarationOnly": true,
-    "declarationDir": "dist",
-
-    /* Build */
     "noEmit": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": false,
+    "esModuleInterop": true,
+    "types": [
+      "node"
+    ]
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
