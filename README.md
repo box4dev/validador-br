@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/github/actions/workflow/status/box4dev/validador-br/ci.yml?style=flat-square" alt="build status" />
 </p>
 
-## 🚀 Características
+## Características
 
 - **Moderno**: Escrito em TypeScript com suporte total a tipos.
 - **Completo**: Valida **CPF**, **CNPJ**, **CNPJ Alfanumérico**, **CNH**, **CNS**, **Título de Eleitor**, **PIS**, **Certidões** (Nascimento, Casamento, Óbito) e **Inscrições Estaduais**.
@@ -23,7 +23,7 @@
 - **Universal**: Suporte nativo a ES Modules (ESM), CommonJS (CJS) e UMD.
 - **Fácil de usar**: API simples e intuitiva.
 
-## 📦 Instalação
+## Instalação
 
 ```bash
 npm install @box4dev/validador-br
@@ -33,7 +33,7 @@ yarn add @box4dev/validador-br
 pnpm add @box4dev/validador-br
 ```
 
-## 🛠️ Como Usar
+## Como Usar
 
 ### API Recomendada (ES Modules)
 
@@ -63,7 +63,7 @@ console.log(isValidCpf('12345678909')); // true ou false
 console.log(validate.cnpj('GYHU8PG2971E10')); // true ou false
 ```
 
-## 📚 Exemplos de Uso
+## Exemplos de Uso
 
 ### CPF
 
@@ -133,7 +133,7 @@ console.log(isValidCartaoCredito('4389 3536 3524 6297')); // true ou false
 console.log(isValidCartaoCredito('4389351453183261')); // true ou false
 ```
 
-## ✅ Validadores Disponíveis
+## Validadores Disponíveis
 
 | Validador              | API                            | Descrição                                                           |
 | :--------------------- | :----------------------------- | :------------------------------------------------------------------ |
@@ -169,15 +169,15 @@ const meuCpf: string = '123.456.789-00';
 const isValid: boolean = isValidCpf(meuCpf);
 ```
 
-## 🤝 Contribuição
+## Contribuição
 
 Contribuições são muito bem-vindas! Sinta-se à vontade para abrir Issues para reportar bugs ou sugerir novas funcionalidades. Para mais detalhes, veja nosso [Guia de Contribuição](https://github.com/box4dev/validador-br?tab=contributing-ov-file#readme).
 
-## ⚖️ Licença
+## Licença
 
 Distribuído sob a licença MIT. Veja [Licença](https://github.com/box4dev/validador-br?tab=MIT-1-ov-file#readme) para mais informações.
 
-## 🛡️ Segurança
+## Segurança
 
 Para reportar vulnerabilidades de segurança, consulte nossa [Política de Segurança](https://github.com/box4dev/validador-br?tab=security-ov-file#readme).
 

@@ -16,7 +16,6 @@ export default defineConfig({
         exports: 'named',
       },
     },
-    // Gera sourcemaps para facilitar o debug
-    sourcemap: true,
+    sourcemap: false,
   },
 });
