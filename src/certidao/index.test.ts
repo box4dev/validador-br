@@ -5,15 +5,15 @@ import { isValidCertidao } from './index.js';
 describe('Validador de Matrícula de Certidão', () => {
   it('deve retornar true para uma matrícula válida sem máscara', () => {
     // Matrícula válida de acordo com o algoritmo oficial do CNJ
-    assert.strictEqual(isValidCertidao('11111111111111111111111111111150'), true);
+    assert.strictEqual(isValidCertidao('11111111111111111111111111111103'), true);
   });
 
   it('deve retornar true para uma matrícula válida com máscara', () => {
-    assert.strictEqual(isValidCertidao('111111 11 1111 1 11111 11111 1111111 50'), true);
+    assert.strictEqual(isValidCertidao('111111 11 1111 1 11111 11111 1111111 03'), true);
   });
 
   it('deve retornar false para uma matrícula com dígito verificador inválido', () => {
-    assert.strictEqual(isValidCertidao('11111111111111111111111111111151'), false);
+    assert.strictEqual(isValidCertidao('11111111111111111111111111111104'), false);
   });
 
   it('deve retornar false para uma matrícula com tamanho incorreto', () => {
