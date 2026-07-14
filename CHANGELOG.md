@@ -13,6 +13,12 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/spec/v2.0.
 - **Test runner**: Vitest substituído pelo Node.js test runner nativo (testes nativos do Node.js)
 - Todos os arquivos de teste migrados para usar `node:test` e `node:assert` em vez de APIs do Vitest
 
+
+## [1.0.2] - 2026-07-14
+
+### Fixed
+- **isValidCertidao**: Corrigido o algoritmo de validação do dígito verificador da matrícula de certidão civil para seguir estritamente o padrão definido pelo CNJ (Conselho Nacional de Justiça).
+
 ## [1.0.1] - 2026-04-29
 
 ### Removed (Breaking Changes)

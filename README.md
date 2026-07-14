@@ -114,8 +114,8 @@ console.log(isValidTituloEleitor('428779582410')); // true ou false
 ### Certidão (nascimento, casamento, óbito)
 ```javascript
 import { isValidCertidao } from '@box4dev/validador-br';
-console.log(isValidCertidao('106836 11 1926 1001 1 88626 162 6561443')); // true ou false
-console.log(isValidCertidao('81007223197120011105781766173474')); // true ou false
+console.log(isValidCertidao('106836 11 1926 1001 1 88626 162 6561494')); // true ou false
+console.log(isValidCertidao('81007223197120011105781766173472')); // true ou false
 ```
 
 ### Inscrição Estadual
