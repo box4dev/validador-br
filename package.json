@@ -37,14 +37,14 @@
   ],
   "sideEffects": false,
   "type": "module",
-  "main": "./dist/validador-br.cjs",
-  "module": "./dist/validador-br.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/validador-br.js",
-      "require": "./dist/validador-br.cjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
     "./package.json": "./package.json"
   },
